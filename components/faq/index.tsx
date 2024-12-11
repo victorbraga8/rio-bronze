@@ -15,9 +15,9 @@ export default function Faq({ id }: { id: string }) {
         "Sim, você pode usar seu biquíni preferido para fazer o bronze, desde que ele seja confortável.",
     },
     {
-      question: "Em quantas sessões fico com a marquinha perfeita?",
+      question: "A clinica é legalizada ?",
       answer:
-        "A marquinha perfeita pode aparecer após 3 a 5 sessões, dependendo da sua pele.",
+        "Sim, temos alvará de funcionamento e legalização para trabalhar com bronzeamento artificial.",
     },
     {
       question: "Qual intervalo ideal entre as sessões?",
@@ -25,9 +25,9 @@ export default function Faq({ id }: { id: string }) {
         "O intervalo ideal é de 48 horas, para garantir a saúde da sua pele.",
     },
     {
-      question: "É necessário usar protetor solar durante o bronze?",
+      question: "O bronzeamento faz mal a saúde ?",
       answer:
-        "Sim, o protetor solar é essencial para proteger a pele mesmo durante o bronze.",
+        "Essa é uma duvida comum. Se você gosta de fazer Bronze artificial, tomar sol na praia ou na piscina, é importante consultar um dermatologista para ter uma ideia do seu fototipo de pele. Pois cada pele tem o seu fototipo e tempo ideal de exposição",
     },
     {
       question: "O bronze é seguro para todos os tipos de pele?",
