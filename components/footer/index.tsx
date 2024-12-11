@@ -5,7 +5,7 @@ import Image from "next/image";
 
 export default function Footer() {
   return (
-    <footer className="bg-gray-900 text-white py-4">
+    <footer className="bg-gray-900 text-white py-1">
       <div className="max-w-6xl mx-auto flex items-center justify-between px-6">
         {/* Copyright */}
         <p className="text-sm">
@@ -30,9 +30,9 @@ export default function Footer() {
             href="https://seulink.com"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-pink-500 hover:text-pink-600"
+            className="text-slate-500 hover:text-slate-600"
           >
-            Seu Nome/Empresa
+            Soluções sem Fronteiras
           </a>
         </p>
       </div>
