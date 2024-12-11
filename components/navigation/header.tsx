@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export const Header = () => {
   return (
-    <div className="flex items-center justify-between bg-orange-600 text-white px-40 py-4 w-full">
+    <div className="flex items-center justify-between bg-orange-600 text-white px-40 py-2 w-full">
       <div className="flex justify-start">
         <ul className="flex space-x-6">
           <li>HOME</li>
@@ -14,8 +14,8 @@ export const Header = () => {
         <Image
           src="/logo.png"
           alt="garota rio bronze"
-          width={200}
-          height={200}
+          width={150}
+          height={150}
         />
       </div>
       <div className="flex justify-end">

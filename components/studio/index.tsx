@@ -10,7 +10,7 @@ export default function StudioSection() {
         {/* Imagem */}
         <div className="relative w-full h-[300px] lg:h-[400px]">
           <Image
-            src="/studio.jpg" // Substitua pelo caminho da sua imagem
+            src="/studio-mock.png" // Substitua pelo caminho da sua imagem
             alt="Studio Corpo e Bronze"
             layout="fill"
             objectFit="cover"
