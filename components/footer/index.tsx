@@ -27,7 +27,7 @@ export default function Footer() {
         <p className="text-sm">
           Desenvolvido por{" "}
           <a
-            href="https://seulink.com"
+            href="#"
             target="_blank"
             rel="noopener noreferrer"
             className="text-slate-500 hover:text-slate-600"
