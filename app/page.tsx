@@ -13,7 +13,7 @@ export default function Home() {
   return (
     <div className="w-screen flex flex-col overflow-x-hidden">
       <Header />
-      <div className="flex-grow">
+      <div id="home" className="flex-grow">
         <CarouselImg />
       </div>
       <Services />
@@ -23,24 +23,22 @@ export default function Home() {
             <Send />
             <span className="text-xl font-bold">Aceitamos PIX</span>
           </div>
-
           <div className="flex items-center gap-4">
             <MessageCircleHeart />
             <span className="text-xl font-bold">
               AMADO por milhares ao redor do mundo.
             </span>
           </div>
-
           <div className="flex items-center gap-4">
             <Wallet />
             <span className="text-xl font-bold">Até 3x sem juros*</span>
           </div>
         </div>
       </div>
-      <Gallery />
-      <Faq />
-      <StudioSection />
-      <Contact />
+      <Gallery id="gallery" />
+      <Faq id="faq" />
+      <StudioSection id="studio" />
+      <Contact id="contact" />
       <Footer />
     </div>
   );

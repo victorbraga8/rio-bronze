@@ -7,7 +7,7 @@ import {
   AccordionContent,
 } from "@/components/ui/accordion";
 
-export default function Faq() {
+export default function Faq({ id }: { id: string }) {
   const faqs = [
     {
       question: "Posso usar meu biquíni para fazer o bronze?",
@@ -42,7 +42,7 @@ export default function Faq() {
   ];
 
   return (
-    <div className="max-w-4xl mx-auto py-10">
+    <div className="max-w-4xl mx-auto py-10" id={id}>
       <h2 className="text-2xl font-bold text-center text-brown-700 mb-6">
         Dúvidas Frequentes:
       </h2>

@@ -3,9 +3,10 @@
 import Image from "next/image";
 import React from "react";
 
-export default function Contact() {
+export default function Contact({ id }: { id: string }) {
   return (
     <div
+      id={id}
       className="relative text-white py-10"
       style={{
         backgroundImage: 'url("/footer.jpg")', // Substitua pelo caminho da imagem

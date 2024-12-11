@@ -2,7 +2,7 @@
 import React, { useState } from "react";
 import Image from "next/image";
 
-export default function Gallery() {
+export default function Gallery({ id }: { id: string }) {
   const images: string[] = [
     "/slide-0.jpg",
     "/slide-2.jpg",
@@ -26,7 +26,7 @@ export default function Gallery() {
   };
 
   return (
-    <div>
+    <div id={id}>
       {/* Gallery */}
       <div className="grid grid-cols-3 ">
         {images.map((image, index) => (

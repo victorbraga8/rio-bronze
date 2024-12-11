@@ -3,9 +3,9 @@
 import React from "react";
 import Image from "next/image";
 
-export default function StudioSection() {
+export default function StudioSection({ id }: { id: string }) {
   return (
-    <div className="bg-orange-800 text-white">
+    <div className="bg-orange-800 text-white" id={id}>
       <div className="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-2 items-center py-10 px-6 gap-8">
         {/* Imagem */}
         <div className="relative w-full h-[300px] lg:h-[400px]">
