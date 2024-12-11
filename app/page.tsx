@@ -1,8 +1,12 @@
 import { CarouselImg } from "@/components/carousel";
+import Contact from "@/components/contact";
+import Faq from "@/components/faq";
+import Footer from "@/components/footer";
 import Gallery from "@/components/gallery";
 
 import { Header } from "@/components/navigation/header";
 import Services from "@/components/services";
+import StudioSection from "@/components/studio";
 import { MessageCircleHeart, Send, Wallet } from "lucide-react";
 
 export default function Home() {
@@ -32,6 +36,10 @@ export default function Home() {
         </div>
       </div>
       <Gallery />
+      <Faq />
+      <StudioSection />
+      <Contact />
+      <Footer />
     </div>
   );
 }
