@@ -13,15 +13,15 @@ export default function Gallery() {
   ];
 
   return (
-    <div className="gallery-container">
+    <div className="w-full flex justify-between">
       {images.map((image, index) => (
-        <div key={index} className="gallery-item">
+        <div key={index} className="w-1/6">
           <Image
             src={image}
             alt={`Gallery Image ${index + 1}`}
-            width={600}
-            height={400}
-            className="gallery-item-image"
+            width={200} // Ajuste para garantir o tamanho correto
+            height={120} // Ajuste para garantir o tamanho correto
+            className="object-cover w-full h-auto"
           />
         </div>
       ))}
