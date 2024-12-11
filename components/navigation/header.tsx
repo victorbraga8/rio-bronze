@@ -1,12 +1,15 @@
-/* eslint-disable @typescript-eslint/no-explicit-any */
 "use client";
 import Image from "next/image";
+import { useState } from "react";
 
 export const Header = () => {
-  const scrollToSection = (id: any) => {
+  const [activeSection, setActiveSection] = useState("home"); // Gerencia a seção ativa
+
+  const scrollToSection = (id: string) => {
     const element = document.getElementById(id);
     if (element) {
       element.scrollIntoView({ behavior: "smooth" });
+      setActiveSection(id); // Define a seção como ativa
     }
   };
 
@@ -18,19 +21,31 @@ export const Header = () => {
           <ul className="flex space-x-6">
             <li
               onClick={() => scrollToSection("home")}
-              className="cursor-pointer"
+              className={`cursor-pointer ${
+                activeSection === "home"
+                  ? "text-white underline"
+                  : "hover:text-yellow-300"
+              }`}
             >
               HOME
             </li>
             <li
               onClick={() => scrollToSection("faq")}
-              className="cursor-pointer"
+              className={`cursor-pointer ${
+                activeSection === "faq"
+                  ? "text-white underline"
+                  : "hover:text-yellow-300"
+              }`}
             >
               DÚVIDAS
             </li>
             <li
               onClick={() => scrollToSection("studio")}
-              className="cursor-pointer"
+              className={`cursor-pointer ${
+                activeSection === "studio"
+                  ? "text-white underline"
+                  : "hover:text-yellow-300"
+              }`}
             >
               PACOTES
             </li>
@@ -52,19 +67,31 @@ export const Header = () => {
           <ul className="flex space-x-6">
             <li
               onClick={() => scrollToSection("gallery")}
-              className="cursor-pointer"
+              className={`cursor-pointer ${
+                activeSection === "gallery"
+                  ? "text-white underline"
+                  : "hover:text-yellow-300"
+              }`}
             >
               FOTOS
             </li>
             <li
               onClick={() => scrollToSection("studio")}
-              className="cursor-pointer"
+              className={`cursor-pointer ${
+                activeSection === "studio"
+                  ? "text-white underline"
+                  : "hover:text-yellow-300"
+              }`}
             >
               NOSSO ESPAÇO
             </li>
             <li
               onClick={() => scrollToSection("contact")}
-              className="cursor-pointer"
+              className={`cursor-pointer ${
+                activeSection === "contact"
+                  ? "text-white underline"
+                  : "hover:text-yellow-300"
+              }`}
             >
               CONTATOS
             </li>
