@@ -27,13 +27,12 @@ export default function Gallery({ id }: { id: string }) {
 
   return (
     <div id={id}>
-      {/* Gallery */}
       <div className="grid grid-cols-3 ">
         {images.map((image, index) => (
           <div
             key={index}
             className="relative group cursor-pointer overflow-hidden"
-            onClick={() => openLightbox(image)} // Abrir Lightbox ao clicar
+            onClick={() => openLightbox(image)}
           >
             <Image
               src={image}
@@ -42,10 +41,10 @@ export default function Gallery({ id }: { id: string }) {
               height={200}
               className="object-cover w-full h-auto"
             />
-            {/* Overlay */}
+
             <div className="absolute inset-0 bg-black bg-opacity-80 group-hover:backdrop-blur-sm transition-all duration-300 flex items-center justify-center">
               <Image
-                src="/logo-garota-rio.png" // Substitua pelo caminho da sua logo
+                src="/logo-garota-rio.png"
                 alt="Logo"
                 width={160}
                 height={160}
@@ -56,11 +55,10 @@ export default function Gallery({ id }: { id: string }) {
         ))}
       </div>
 
-      {/* Lightbox */}
       {isLightboxOpen && currentImage && (
         <div
           className="fixed inset-0 bg-black bg-opacity-80 flex items-center justify-center z-50"
-          onClick={closeLightbox} // Fechar ao clicar fora da imagem
+          onClick={closeLightbox}
         >
           <div className="relative">
             <Image
@@ -69,7 +67,7 @@ export default function Gallery({ id }: { id: string }) {
               width={800}
               height={500}
               className="object-contain max-w-full max-h-full"
-              priority // Priorizar o carregamento da imagem
+              priority
             />
             <button
               onClick={closeLightbox}
