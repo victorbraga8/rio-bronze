@@ -7,22 +7,22 @@ export default function StudioSection({ id }: { id: string }) {
   return (
     <div className="bg-orange-800 text-white" id={id}>
       <div className="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-2 items-center py-10 px-6 gap-8">
-        {/* Imagem */}
-        <div className="relative w-full h-[300px] lg:h-[400px]">
+        <div className="relative w-full h-[300px] md:h-[400px]">
           <Image
-            src="/studio-mock.png" // Substitua pelo caminho da sua imagem
+            src="/studio-mock.png"
             alt="Studio Corpo e Bronze"
             layout="fill"
             objectFit="cover"
             className="rounded-lg shadow-lg"
-            priority // Carregamento otimizado
+            priority
           />
         </div>
 
-        {/* Conteúdo */}
         <div className="flex flex-col gap-6">
-          <h2 className="text-3xl font-bold">Studio Garota Rio Bronze</h2>
-          <p className="text-lg">
+          <h2 className="text-2xl md:text-3xl font-bold">
+            Studio Garota Rio Bronze
+          </h2>
+          <p className="text-base md:text-lg">
             <span className="font-semibold">Bronzeamento Artificial</span>{" "}
             Personalizado: Você Escolhe!
           </p>
@@ -40,7 +40,7 @@ export default function StudioSection({ id }: { id: string }) {
               Eficaz
             </li>
           </ul>
-          <button className="bg-green-500 text-white font-bold px-6 py-2 rounded-lg hover:bg-green-600 transition">
+          <button className="bg-green-500 text-white font-bold px-4 md:px-6 py-2 rounded-lg hover:bg-green-600 transition">
             FALE CONOSCO
           </button>
         </div>

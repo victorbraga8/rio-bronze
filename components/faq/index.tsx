@@ -15,7 +15,7 @@ export default function Faq({ id }: { id: string }) {
         "Sim, você pode usar seu biquíni preferido para fazer o bronze, desde que ele seja confortável.",
     },
     {
-      question: "A clinica é legalizada ?",
+      question: "A clínica é legalizada?",
       answer:
         "Sim, temos alvará de funcionamento e legalização para trabalhar com bronzeamento artificial.",
     },
@@ -25,9 +25,9 @@ export default function Faq({ id }: { id: string }) {
         "O intervalo ideal é de 48 horas, para garantir a saúde da sua pele.",
     },
     {
-      question: "O bronzeamento faz mal a saúde ?",
+      question: "O bronzeamento faz mal à saúde?",
       answer:
-        "Essa é uma duvida comum. Se você gosta de fazer Bronze artificial, tomar sol na praia ou na piscina, é importante consultar um dermatologista para ter uma ideia do seu fototipo de pele. Pois cada pele tem o seu fototipo e tempo ideal de exposição",
+        "Essa é uma dúvida comum. Se você gosta de fazer bronze artificial, tomar sol na praia ou na piscina, é importante consultar um dermatologista para ter uma ideia do seu fototipo de pele. Pois cada pele tem o seu fototipo e tempo ideal de exposição.",
     },
     {
       question: "O bronze é seguro para todos os tipos de pele?",
@@ -46,7 +46,7 @@ export default function Faq({ id }: { id: string }) {
       <h2 className="text-2xl font-bold text-center text-brown-700 mb-6">
         Dúvidas Frequentes:
       </h2>
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
         {faqs.map((faq, index) => (
           <Accordion
             key={index}

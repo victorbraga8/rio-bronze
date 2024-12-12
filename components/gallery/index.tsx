@@ -16,9 +16,8 @@ export default function CustomGallery({ id }: { id: string }) {
 
   return (
     <div id={id}>
-      {/* Gallery */}
       <Gallery>
-        <div className="grid grid-cols-3">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
           {images.map((image, index) => (
             <Item
               key={index}
@@ -31,7 +30,7 @@ export default function CustomGallery({ id }: { id: string }) {
                 <div
                   ref={ref}
                   className="relative group cursor-pointer overflow-hidden"
-                  onClick={open} // Abrir Lightbox ao clicar
+                  onClick={open}
                 >
                   <Image
                     src={image}
@@ -40,10 +39,9 @@ export default function CustomGallery({ id }: { id: string }) {
                     height={200}
                     className="object-cover w-full h-auto"
                   />
-                  {/* Overlay */}
                   <div className="absolute inset-0 bg-black bg-opacity-80 group-hover:backdrop-blur-sm transition-all duration-300 flex items-center justify-center">
                     <Image
-                      src="/logo-garota-rio.png" // Substitua pelo caminho da sua logo
+                      src="/logo-garota-rio.png"
                       alt="Logo"
                       width={160}
                       height={160}

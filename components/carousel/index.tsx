@@ -1,6 +1,5 @@
 "use client";
 import * as React from "react";
-
 import { Card, CardContent } from "@/components/ui/card";
 import {
   Carousel,
@@ -12,26 +11,16 @@ import Image from "next/image";
 
 export function CarouselImg() {
   const [api, setApi] = React.useState<CarouselApi>();
-  // const [current, setCurrent] = React.useState(0);
-  // const [count, setCount] = React.useState(0);
 
   React.useEffect(() => {
     if (!api) {
       return;
     }
-
-    // setCount(api.scrollSnapList().length);
-    // setCurrent(api.selectedScrollSnap() + 1);
-
-    // api.on("select", () => {
-    //   setCurrent(api.selectedScrollSnap() + 1);
-    // });
+    // Adicione mais lógica aqui se necessário
   }, [api]);
 
   return (
     <div className="w-screen h-[80vh]">
-      {" "}
-      {/* Ajusta altura do slider */}
       <Carousel setApi={setApi} className="flex w-full h-full">
         <CarouselContent className="flex w-screen h-full">
           {Array.from({ length: 1 }).map((_, index) => (

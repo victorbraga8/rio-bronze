@@ -9,7 +9,7 @@ export default function Contact({ id }: { id: string }) {
       id={id}
       className="relative text-white py-10"
       style={{
-        backgroundImage: 'url("/footer.jpg")', // Substitua pelo caminho da imagem
+        backgroundImage: 'url("/footer.jpg")',
         backgroundSize: "cover",
         backgroundPosition: "center",
       }}
@@ -48,7 +48,6 @@ export default function Contact({ id }: { id: string }) {
           </div>
         </div>
 
-        {/* Formulário */}
         <div className="bg-white text-black p-6 rounded-lg shadow-lg relative z-10">
           <h2 className="text-2xl font-bold mb-4 text-orange-600">
             Entre em Contato
