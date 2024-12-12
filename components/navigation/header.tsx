@@ -22,8 +22,8 @@ export const Header = () => {
         <Image
           src="/logo.png"
           alt="Garota do Rio Bronze"
-          width={100}
-          height={100}
+          width={150}
+          height={150}
           className="md:hidden block"
         />
         {/* Hamburger Menu */}
@@ -60,9 +60,9 @@ export const Header = () => {
           {[
             ["home", "HOME"],
             ["faq", "DÚVIDAS"],
-            ["studio1", "PACOTES"],
+            ["services", "PACOTES"],
             ["gallery", "FOTOS"],
-            ["studio2", "NOSSO ESPAÇO"],
+            ["studio", "NOSSO ESPAÇO"],
             ["contact", "CONTATOS"],
           ].map(([id, label], index) => (
             <li
@@ -86,7 +86,7 @@ export const Header = () => {
           {[
             ["home", "HOME"],
             ["faq", "DÚVIDAS"],
-            ["studio1", "PACOTES"],
+            ["services", "PACOTES"],
           ].map(([id, label], index) => (
             <li
               key={`${id}-${index}`}
@@ -104,14 +104,14 @@ export const Header = () => {
         <Image
           src="/logo.png"
           alt="Garota do Rio Bronze"
-          width={100}
-          height={100}
+          width={200}
+          height={200}
           className="mx-8"
         />
         <ul className="flex space-x-6">
           {[
             ["gallery", "FOTOS"],
-            ["studio2", "NOSSO ESPAÇO"],
+            ["studio", "NOSSO ESPAÇO"],
             ["contact", "CONTATOS"],
           ].map(([id, label], index) => (
             <li

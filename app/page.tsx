@@ -16,7 +16,7 @@ export default function Home() {
       <div id="home" className="flex-grow overflow-hidden">
         <CarouselImg />
       </div>
-      <Services />
+      <Services id="services" />
       <div className="bg-orange-500 py-8 hidden md:block">
         <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center text-white px-4 space-y-6 md:space-y-0 md:space-x-8">
           <div className="flex items-center gap-4">

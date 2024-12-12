@@ -6,9 +6,9 @@ import {
   CardHeader,
 } from "@/components/ui/card";
 
-export default function Services() {
+export default function Services({ id }: { id: string }) {
   return (
-    <div className="bg-white py-10 px-4 md:px-10">
+    <div className="bg-white py-10 px-4 md:px-10" id={id}>
       <h2 className="text-center font-semibold text-2xl mb-4 text-slate-700">
         CONHEÇA OS BENEFÍCIOS DO{" "}
         <span className="text-amber-600 font-black">GAROTA DO RIO BRONZE</span>
