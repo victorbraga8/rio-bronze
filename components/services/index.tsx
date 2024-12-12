@@ -8,7 +8,7 @@ import {
 
 export default function Services() {
   return (
-    <div className="bg-white py-10">
+    <div className="bg-white py-10 px-4 md:px-10">
       <h2 className="text-center font-semibold text-2xl mb-4 text-slate-700">
         CONHEÇA OS BENEFÍCIOS DO{" "}
         <span className="text-amber-600 font-black">GAROTA DO RIO BRONZE</span>
@@ -19,7 +19,7 @@ export default function Services() {
       </p>
 
       <div className="flex flex-col md:flex-row justify-center gap-8">
-        <Card className="max-w-sm bg-gray-900 text-white">
+        <Card className="max-w-sm bg-gray-900 text-white px-4 md:px-6">
           <CardHeader>
             <div className="bg-yellow-500 py-2 px-4 text-white font-bold text-lg uppercase text-center">
               Pacote 1
@@ -46,7 +46,7 @@ export default function Services() {
           </CardFooter>
         </Card>
 
-        <Card className="max-w-sm bg-gray-900 text-white">
+        <Card className="max-w-sm bg-gray-900 text-white px-4 md:px-6">
           <CardHeader>
             <div className="bg-orange-500 py-2 px-4 text-white font-bold text-lg text-center">
               PACOTE 2
@@ -73,7 +73,7 @@ export default function Services() {
           </CardFooter>
         </Card>
 
-        <Card className="max-w-sm bg-gray-900 text-white">
+        <Card className="max-w-sm bg-gray-900 text-white px-4 md:px-6">
           <CardHeader>
             <div className="bg-amber-800 py-2 px-4 text-white font-bold text-lg text-center">
               PACOTE 3

@@ -6,11 +6,11 @@ import Image from "next/image";
 export default function Footer() {
   return (
     <footer className="bg-gray-950 text-white py-1">
-      <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between px-6 space-y-4 md:space-y-0">
-        <p className="text-sm">
+      <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between px-6 md:pb-0 pb-3 space-y-4 md:space-y-0 ">
+        <p className="text-sm hidden md:block">
           &copy; {new Date().getFullYear()} Todos os direitos reservados.
         </p>
-        <div className="flex justify-center">
+        <div className=" justify-center hidden md:flex">
           <Image
             src="/logo-garota-rio.png"
             alt="Logo"
@@ -19,7 +19,7 @@ export default function Footer() {
             className="object-contain"
           />
         </div>
-        <p className="text-sm">
+        <p className="text-sm itex-">
           Desenvolvido por{" "}
           <a
             href="#"

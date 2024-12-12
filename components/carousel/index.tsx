@@ -1,44 +1,39 @@
-"use client";
-import * as React from "react";
-import { Card, CardContent } from "@/components/ui/card";
-import {
-  Carousel,
-  CarouselContent,
-  CarouselItem,
-  type CarouselApi,
-} from "@/components/ui/carousel";
+import "photoswipe/style.css";
 import Image from "next/image";
 
-export function CarouselImg() {
-  const [api, setApi] = React.useState<CarouselApi>();
-
-  React.useEffect(() => {
-    if (!api) {
-      return;
-    }
-    // Adicione mais lógica aqui se necessário
-  }, [api]);
+export default function CarouselImg() {
+  const images = [{ src: "/slide-1.jpg", width: 1920, height: 1080 }];
 
   return (
-    <div className="w-screen h-[80vh]">
-      <Carousel setApi={setApi} className="flex w-full h-full">
-        <CarouselContent className="flex w-screen h-full">
-          {Array.from({ length: 1 }).map((_, index) => (
-            <CarouselItem key={index} className="w-full h-full">
-              <Card className="w-full h-full">
-                <CardContent className="flex items-center justify-center p-6 w-full h-full">
+    <div className="relative w-screen h-[80vh]">
+      <div className="absolute inset-0 flex items-center justify-center z-10">
+        <Image
+          src="/logo.png"
+          alt="Garota Rio Bronze Logo"
+          width={600}
+          height={600}
+          className="object-contain p-3"
+        />
+      </div>
+      <div className="flex w-full h-full">
+        <div className="flex w-screen h-full">
+          {images.map((image, index) => (
+            <div key={index} className="w-full h-full">
+              <div className="w-full h-full">
+                <div className="flex items-center justify-center w-full h-full">
                   <Image
-                    src="/slide-1.jpg"
-                    alt="garota rio bronze"
+                    src={image.src}
+                    alt={`Gallery image ${index + 1}`}
                     layout="fill"
                     objectFit="cover"
+                    className="responsive-image"
                   />
-                </CardContent>
-              </Card>
-            </CarouselItem>
+                </div>
+              </div>
+            </div>
           ))}
-        </CarouselContent>
-      </Carousel>
+        </div>
+      </div>
     </div>
   );
 }

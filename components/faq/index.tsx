@@ -42,7 +42,7 @@ export default function Faq({ id }: { id: string }) {
   ];
 
   return (
-    <div className="max-w-4xl mx-auto py-10" id={id}>
+    <div className="max-w-6xl mx-auto py-10 px-4 md:px-10" id={id}>
       <h2 className="text-2xl font-bold text-center text-brown-700 mb-6">
         Dúvidas Frequentes:
       </h2>

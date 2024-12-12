@@ -77,4 +77,13 @@ body {
   html {
     scroll-behavior: smooth;
   }
+  .pswp img {
+    height: auto !important;
+  }
+  .pswp__img {
+    height: auto !important;
+  }
+  #imgContainer img {
+    height: auto !important;
+  }
 }

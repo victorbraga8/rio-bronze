@@ -5,26 +5,26 @@ import { Gallery, Item } from "react-photoswipe-gallery";
 import "photoswipe/dist/photoswipe.css";
 
 export default function CustomGallery({ id }: { id: string }) {
-  const images: string[] = [
-    "/slide-0.jpg",
-    "/slide-2.jpg",
-    "/slide-3.jpg",
-    "/slide-4.jpg",
-    "/slide-5.jpg",
-    "/slide-6.jpg",
+  const images: { src: string; width: number; height: number }[] = [
+    { src: "/slide-0.jpg", width: 1200, height: 1600 },
+    { src: "/slide-2.jpg", width: 1200, height: 1600 },
+    { src: "/slide-3.jpg", width: 1200, height: 1600 },
+    { src: "/slide-4.jpg", width: 1200, height: 1600 },
+    { src: "/slide-5.jpg", width: 1200, height: 1600 },
+    { src: "/slide-6.jpg", width: 1200, height: 1600 },
   ];
 
   return (
     <div id={id}>
       <Gallery>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 ">
           {images.map((image, index) => (
             <Item
               key={index}
-              original={image}
-              thumbnail={image}
-              width="800"
-              height="600"
+              original={image.src}
+              thumbnail={image.src}
+              width={image.width}
+              height={image.height}
             >
               {({ ref, open }) => (
                 <div
@@ -32,13 +32,15 @@ export default function CustomGallery({ id }: { id: string }) {
                   className="relative group cursor-pointer overflow-hidden"
                   onClick={open}
                 >
-                  <Image
-                    src={image}
-                    alt={`Gallery Image ${index + 1}`}
-                    width={300}
-                    height={200}
-                    className="object-cover w-full h-auto"
-                  />
+                  <div id="imgContainer">
+                    <Image
+                      src={image.src}
+                      alt={`Gallery Image ${index + 1}`}
+                      width={800}
+                      height={600}
+                      className="object-cover w-full h-auto"
+                    />
+                  </div>
                   <div className="absolute inset-0 bg-black bg-opacity-80 group-hover:backdrop-blur-sm transition-all duration-300 flex items-center justify-center">
                     <Image
                       src="/logo-garota-rio.png"
