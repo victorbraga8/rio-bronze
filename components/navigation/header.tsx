@@ -1,24 +1,23 @@
 "use client";
+import React, { useState } from "react";
 import Image from "next/image";
-import { useState } from "react";
 
 export const Header = () => {
-  const [activeSection, setActiveSection] = useState("home"); // Gerencia a seção ativa
+  const [activeSection, setActiveSection] = useState("home");
 
   const scrollToSection = (id: string) => {
     const element = document.getElementById(id);
     if (element) {
       element.scrollIntoView({ behavior: "smooth" });
-      setActiveSection(id); // Define a seção como ativa
+      setActiveSection(id);
     }
   };
 
   return (
-    <div className="fixed top-0 left-0 w-full z-50 bg-orange-600 text-white px-40 py-2 shadow-md">
+    <div className="fixed top-0 left-0 w-full z-50 bg-orange-600 text-white px-4 md:px-40 py-2 shadow-md">
       <div className="flex items-center justify-between">
-        {/* Menu Esquerdo */}
         <div className="flex justify-start">
-          <ul className="flex space-x-6">
+          <ul className="flex space-x-4 md:space-x-6">
             <li
               onClick={() => scrollToSection("home")}
               className={`cursor-pointer ${
@@ -51,8 +50,6 @@ export const Header = () => {
             </li>
           </ul>
         </div>
-
-        {/* Logo */}
         <div className="flex justify-center">
           <Image
             src="/logo.png"
@@ -61,10 +58,8 @@ export const Header = () => {
             height={150}
           />
         </div>
-
-        {/* Menu Direito */}
         <div className="flex justify-end">
-          <ul className="flex space-x-6">
+          <ul className="flex space-x-4 md:space-x-6">
             <li
               onClick={() => scrollToSection("gallery")}
               className={`cursor-pointer ${
