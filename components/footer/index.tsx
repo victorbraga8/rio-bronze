@@ -22,7 +22,7 @@ export default function Footer() {
         <p className="text-sm itex-">
           Desenvolvido por{" "}
           <a
-            href="#"
+            href="https://api.whatsapp.com/send?phone=5521982845445"
             target="_blank"
             rel="noopener noreferrer"
             className="text-slate-500 hover:text-slate-600"
